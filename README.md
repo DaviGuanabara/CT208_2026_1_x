@@ -5,6 +5,10 @@ CT208 - Matemática para Computação
 Professor: Luiz Mirizola
 
 Trabalho da Lista 2
-Algoritmo X, 
+Algoritmo x
+
+
+Vamos implementar o algoritmo descrito na lista 2, e preencher a tabela dada pelo professor.
+A implementação será em python.
 
 
