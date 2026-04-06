@@ -6,11 +6,16 @@ is much cleaner and closer to the PDF pseudo-code.
 """
 
 from __future__ import annotations
-
+from dataclasses import dataclass
 import time
 from typing import List, Sequence, TypeVar
 
-from auto_counter import AutoCounter
+try:
+    from .auto_counter import AutoCounter
+except ImportError:
+    from auto_counter import AutoCounter
+
+
 
 T = TypeVar("T")
 
