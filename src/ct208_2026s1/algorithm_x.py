@@ -11,6 +11,11 @@ except ImportError:
 PrefixTest = Callable[[Sequence[int], int], bool]
 
 
+"""
+It is a Finite State Machine!
+"""
+
+
 class AlgorithmX(InstrumentedAlgorithm):
     """
     Algorithm X: lexicographic generation with restricted prefixes.
@@ -103,6 +108,7 @@ class AlgorithmX(InstrumentedAlgorithm):
 
         self.start_timer()
 
+        # FINITE STATE MACHINE EXECUTION
         while True:
             # X2. [Enter level k] Set p <- 0, q <- l0.
             if self.compare_equal(self.current_state, "X2"):
@@ -127,6 +133,8 @@ class AlgorithmX(InstrumentedAlgorithm):
                     current_value,
                 )
 
+                # Se prefixo for inválido, rejeita e volta para X3. Se for válido, testa se é folha.
+                #
                 if self.compare_true(not self._run_current_prefix_test()):
                     self.record_rejected_prefix()
                     self.current_state = self.assign_local("X5")
