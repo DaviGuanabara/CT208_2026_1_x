@@ -184,6 +184,7 @@ def plot_n_sweep(raw_rows: List[Dict[str, float]]) -> None:
         plt.figure(figsize=(8, 5))
         plt.plot(ns, [row[col_100] for row in raw_rows], marker="o", label="100%")
         plt.plot(ns, [row[col_10] for row in raw_rows], marker="o", label="~10%")
+        plt.yscale("log")
         plt.xlabel("n")
         plt.ylabel(ylabel)
         plt.title(f"Algorithm X: {ylabel} vs n")
